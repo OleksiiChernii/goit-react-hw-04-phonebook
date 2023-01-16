@@ -32,13 +32,9 @@ export const App = () => {
     setContacts([...contacts, { name: name, number: number, id: nanoid() }]);
   };
 
-  const filterHandler = filter => {
-    setFilter(filter);
-  };
+  const filterHandler = filter => setFilter(filter);
 
-  const deleteHandler = id => {
-    setContacts(contacts.filter(contact => contact.id !== id));
-  };
+  const deleteHandler = id => setContacts(contacts.filter(contact => contact.id !== id));
 
   const getContacts = () => {
     return contacts.filter(
